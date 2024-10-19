@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>BOOK-LIST</h1>
+        <nav id="navbar">
+          <ul>
+            <li><a href="#book-list">Book List</a></li>
+            <li><a href="#wishlist">Wishlist</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="search-container">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search by title or author"
+        />
+        <select id="genre-filter">
+          <option value="">All Genres</option>
+          <!-- Dynamically populated options -->
+        </select>
+      </div>
+
+      <div id="loading" class="loading">Loading books...</div>
+      <div id="error" class="error"></div>
+
+      <div id="pagination"></div>
+      <ul id="book-list"></ul>
+      <ul id="wishlist"></ul>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

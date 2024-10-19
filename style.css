@@ -1,0 +1,164 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #8ad3e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #4a90e2;
+}
+
+/* Navbar styles */
+#navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline;
+  margin: 0 5px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #4a90e2; /* Button background color */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#navbar a:hover {
+  background-color: #357ab8; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#genre-filter {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Loading and error messages */
+.loading {
+  display: none;
+  font-weight: bold;
+  text-align: center;
+  color: #000000bd;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+/* Book list and wishlist styles */
+#book-list,
+#wishlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#book-list li,
+#wishlist li {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ffffff71;
+  transition: background-color 0.3s;
+  position: relative; /* For positioning the button */
+}
+
+/* Add to Wishlist button styles */
+.wishlist-button {
+  background-color: #28a745; /* Green background */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute; /* Position it within the list item */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.wishlist-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+#book-list li:hover,
+#wishlist li:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+/* Pagination styles */
+#pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-number {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #22528a; /* Button background color */
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-number:hover {
+  background-color: #7ab8ff; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+  }
+
+  #search-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
